@@ -10,7 +10,6 @@ import { SignupComponent } from './Authentication/signup/signup.component';
 import { LoginComponent } from './Authentication/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
@@ -37,7 +36,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatDialogModule,
     MatButtonModule,
     MatIconModule,
     MatAutocompleteModule,

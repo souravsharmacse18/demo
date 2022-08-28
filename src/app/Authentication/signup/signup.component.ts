@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   public user={
     fname:'',
     lname:'',
-    address:'',
+    age:'',
     phone_number:'',
     emailId:'',
     password:''
@@ -25,13 +25,11 @@ export class SignupComponent implements OnInit {
 
   fname=new FormControl('',[Validators.required]);
   lname=new FormControl('',[Validators.required]);
-  address=new FormControl('',[Validators.required]);
+  age=new FormControl('',[Validators.required]);
   phone_number=new FormControl('',[Validators.required, Validators.pattern('[0-9]{10,10}')]);
   email_id=new FormControl('',[Validators.required, Validators.email]);
   password=new FormControl('',[Validators.required]);
-  constructor(
-    
-    public dialogRef: MatDialogRef<SignupComponent>,private snack:MatSnackBar, private authservice:AuthserviceService,private router:Router
+  constructor(private snack:MatSnackBar, private authservice:AuthserviceService,private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -39,7 +37,7 @@ export class SignupComponent implements OnInit {
 
   onformsubmit()
   {
-    if(this.fname.hasError('required')||this.lname.hasError('required')||this.address.hasError('required')||this.phone_number.hasError('required')||this.phone_number.hasError('pattern')||this.email_id.hasError('required')||this.email_id.hasError('email')||this.password.hasError('required'))
+    if(this.fname.hasError('required')||this.lname.hasError('required')||this.age.hasError('required')||this.phone_number.hasError('required')||this.phone_number.hasError('pattern')||this.email_id.hasError('required')||this.email_id.hasError('email')||this.password.hasError('required'))
     {
       this.snack.open('Invalid Details, Please Enter Valid Details','',{
         duration:3000,
@@ -55,7 +53,6 @@ export class SignupComponent implements OnInit {
             'Successfully Registered',
             'success',
           );
-          this.dialogRef.close();
         },
         (error)=>
         {

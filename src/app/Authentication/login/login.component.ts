@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   email=new FormControl('',[Validators.required,Validators.email]);
   password=new FormControl('',[Validators.required]);
-  constructor(private dialogRef: MatDialogRef<LoginComponent>, private authservice:AuthserviceService,private snack:MatSnackBar) { }
+  constructor( private authservice:AuthserviceService,private snack:MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
             'Successfully Logged In',
             'success',
           );
-          this.dialogRef.close();
         }
         else
         {
