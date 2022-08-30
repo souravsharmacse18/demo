@@ -21,12 +21,14 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewBookSlotComponent } from './Authentication/view-book-slot/view-book-slot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    ViewBookSlotComponent
   ],
   imports: [
     BrowserModule,

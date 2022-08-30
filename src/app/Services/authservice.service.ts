@@ -15,4 +15,7 @@ export class AuthserviceService {
   {
     return this.http.post('http://localhost:8081/login',loginData);
   }
+  public bookNewSlot(bookSlot: any){
+    return this.http.post('http://localhost:8081/book-slot',bookSlot);
+  }
 }
