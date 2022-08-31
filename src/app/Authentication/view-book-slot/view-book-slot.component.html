@@ -1,32 +1,32 @@
 <mat-card>
-    <div class="center-class">
-           <mat-icon class="icon-large">
-                calendar_today
-            </mat-icon>
-            <h4>Book Your Consultation Today</h4>
-    </div>
-  
-      <form class="example-form" (ngSubmit)="onBookAppointment()">
+  <div class="center-class">
+         <mat-icon class="icon-large">
+              calendar_today
+          </mat-icon>
+          <h4>Book Your Consultation Today</h4>
+  </div>
+
+    <form class="example-form" (ngSubmit)="onBookAppointment()">
+        
+        
           
-          
-            
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input type="type"  [formControl]="name" matInput required>
+    </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Name</mat-label>
-        <input type="type" [(ngModel)]="bookSlot.name" [formControl]="name" matInput required>
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Email Id</mat-label>
-        <input type="email" [(ngModel)]="bookSlot.email" [formControl]="email" matInput required>
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Date</mat-label>
-        <input type="date"  [(ngModel)]="bookSlot.date" [formControl]="date" matInput required>
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Time</mat-label>
-        <input type="time"  [(ngModel)] = "bookSlot.time" [formControl]="time" matInput required>
-      </mat-form-field>
-    <button class="example-full-width" mat-raised-button color="accent">Pay & Book Appointment</button>
-    
-  </form>
-  </mat-card>
+      <mat-label>Email Id</mat-label>
+      <input type="email" [(ngModel)]="useremail.email" [formControl]="email" matInput required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Date</mat-label>
+      <input type="date"  [(ngModel)]="bookSlot.date" [formControl]="date" matInput required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Time</mat-label>
+      <input type="time"  [(ngModel)] = "bookSlot.time" [formControl]="time" matInput required>
+    </mat-form-field>
+  <button class="example-full-width" mat-raised-button color="accent">Pay & Book Appointment</button>
+  
+</form>
+</mat-card>

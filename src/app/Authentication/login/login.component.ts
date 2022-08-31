@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       
     }
     else{
+      this.authservice.addemail(this.user.email);
     this.authservice.userlogin(this.user).subscribe(
       (data:any)=>
       {
